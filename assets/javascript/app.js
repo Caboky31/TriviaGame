@@ -67,7 +67,6 @@ $('#play').on("click", function() {
     } else if ($('#false').prop("checked", true) && (questions[0].a === false)){
        score++;
        questionNum++;
-   
 
     } 
 
