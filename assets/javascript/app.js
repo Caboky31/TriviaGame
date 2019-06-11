@@ -1,4 +1,4 @@
-$(document).ready(function() {  // I think this starts the Jquery on the page not sure why I need this
+ $(document).ready(function() {  // I think this starts the Jquery on the page not sure why I need this
 
 });
 
@@ -47,7 +47,7 @@ function displayCurrentQ() {
 }
 $('#play').on("click", function() {
     gameOver = setTimeout(function() { // adds a timer of 5 seconds to the game kept it short because the game is broken
-        alert("game over");  // doesn't start untill you press play
+        alert("game over");  // doesn't start until you press play
     }, 5000)
 });
 
