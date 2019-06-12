@@ -27,6 +27,7 @@ var questions = [   // Tried to make an object but got confused on what to call 
     }
 ];
 
+console.log(questions);
 
 
 // need to loop through the questions array and show each q 
