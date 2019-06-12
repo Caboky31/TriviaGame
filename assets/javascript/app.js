@@ -3,12 +3,13 @@
     var questionNum = 0;
     var numOfQuestions = 3;
     var score = 0;
-    var scoreElem = $("#play").click(function() {  
+    const scoreElem = () => {$("#play").click(function() {  
         $( this ).replaceWith( "<div>" + "Score: " + score + "</div>" );  // replaces play button with the current score 
        displayCurrentQ(); // this invokes my current q function but only shows the first q
     // couldn't get the style to change to what I wanted when question was added to html
+});
+    }
     
-    });
     
 
 var questions = [   // Tried to make an object but got confused on what to call each time so went with an array.
@@ -45,7 +46,7 @@ function displayCurrentQ() {
     
 }
 $('#play').on("click", function() {
-    gameOver = setTimeout(function() { // adds a timer of 5 seconds to the game kept it short because the game is broken
+    gameOver = setTimeout(function() { // adds a timer of 8 seconds to the game kept it short because the game is broken
         alert("game over");  // doesn't start until you press play
     }, 8000)
 });
@@ -69,6 +70,14 @@ $('#play').on("click", function() {
 
     } 
 
+    const endGame = () => {
+        if (questionNum > numOfQuestions){
+            return;
+        }
+    }
+
 checkAnwser(); // this runs my broken function ... 
+endGame(); 
+scoreElem();
 
 });
