@@ -1,6 +1,15 @@
  $(document).ready(function() {  // I think this starts the Jquery on the page not sure why I need this
-
-});
+    console.log(questions.length); // log to console the array length to test
+    var questionNum = 0;
+    var numOfQuestions = 3;
+    var score = 0;
+    var scoreElem = $("#play").click(function() {  
+        $( this ).replaceWith( "<div>" + "Score: " + score + "</div>" );  // replaces play button with the current score 
+       displayCurrentQ(); // this invokes my current q function but only shows the first q
+    // couldn't get the style to change to what I wanted when question was added to html
+    
+    });
+    
 
 var questions = [   // Tried to make an object but got confused on what to call each time so went with an array.
     {
@@ -17,17 +26,7 @@ var questions = [   // Tried to make an object but got confused on what to call 
     }
 ];
 
-console.log(questions.length); // log to console the array length to test
-var questionNum = 0;
-var numOfQuestions = 3;
-var score = 0;
-var scoreElem = $("#play").click(function() {  
-    $( this ).replaceWith( "<div>" + "Score: " + score + "</div>" );  // replaces play button with the current score 
-   displayCurrentQ(); // this invokes my current q function but only shows the first q
-// couldn't get the style to change to what I wanted when question was added to html
 
-});
-;
 
 // need to loop through the questions array and show each q 
 function displayCurrentQ() {
@@ -48,7 +47,7 @@ function displayCurrentQ() {
 $('#play').on("click", function() {
     gameOver = setTimeout(function() { // adds a timer of 5 seconds to the game kept it short because the game is broken
         alert("game over");  // doesn't start until you press play
-    }, 5000)
+    }, 8000)
 });
 
 
@@ -72,3 +71,4 @@ $('#play').on("click", function() {
 
 checkAnwser(); // this runs my broken function ... 
 
+});
