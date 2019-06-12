@@ -32,7 +32,7 @@ console.log(questions);
 
 // need to loop through the questions array and show each q 
 function displayCurrentQ() {
-        var questionLength = questions.length; // couldn't get the questions to loop through 
+        var questionLength = questions[0]; // couldn't get the questions to loop through 
     for (i = 0; i < questionLength; i++){
         questionLength[i] = questionNum;
         
