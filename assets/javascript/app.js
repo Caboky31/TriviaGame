@@ -1,6 +1,6 @@
  $(document).ready(function() {  // I think this starts the Jquery on the page not sure why I need this
 
-    var questionNum = 0;
+    var questionNum;
     var numOfQuestions = 3;
     var score = 0;
     const scoreElem = () => {$("#play").click(function() {  
