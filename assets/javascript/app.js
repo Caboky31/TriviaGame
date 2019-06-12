@@ -1,5 +1,5 @@
  $(document).ready(function() {  // I think this starts the Jquery on the page not sure why I need this
-    console.log(questions.length); // log to console the array length to test
+
     var questionNum = 0;
     var numOfQuestions = 3;
     var score = 0;
